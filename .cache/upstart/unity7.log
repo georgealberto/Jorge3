@@ -1,0 +1,7 @@
+WARN  2016-10-31 23:56:33 unity.iconloader IconLoader.cpp:756 Unable to load icon file:/// at size -1x22: Can't open directory
+
+(unity-control-center:6177): GVFS-WARNING **: Error creating proxy: Error calling StartServiceByName for org.gtk.vfs.Daemon: GDBus.Error:org.freedesktop.DBus.Error.Spawn.ExecFailed: Failed to execute program org.gtk.vfs.Daemon: Input/output error (g-dbus-error-quark, 23)
+
+
+(firefox:6517): GVFS-WARNING **: Error creating proxy: Error calling StartServiceByName for org.gtk.vfs.Daemon: GDBus.Error:org.freedesktop.DBus.Error.Spawn.ExecFailed: Failed to execute program org.gtk.vfs.Daemon: Input/output error (g-dbus-error-quark, 23)
+

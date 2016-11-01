@@ -1,0 +1,21 @@
+logrotate state -- version 2
+"/home/ubuntu/.cache/upstart/dbus.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/indicator-sound.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/indicator-keyboard.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/window-stack-bridge.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/unity-settings-daemon.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/unity7.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/hud.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/ssh-agent.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/indicator-printers.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/bamfdaemon.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/at-spi2-registryd.log" 2016-10-31-21:43:14
+"/home/ubuntu/.cache/upstart/gpg-agent.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/update-notifier-crash-_var_crash__usr_bin_nautilus.999.crash.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/update-notifier-crash-_var_crash__usr_bin_nm-applet.999.crash.log" 2016-10-31-23:0:0
+"/home/ubuntu/.cache/upstart/upstart-event-bridge.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/indicator-messages.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/unity-panel-service.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/gnome-keyring.log" 2016-10-31-23:55:10
+"/home/ubuntu/.cache/upstart/indicator-session.log" 2016-10-31-21:43:14
+"/home/ubuntu/.cache/upstart/gnome-keyring-ssh.log" 2016-10-31-23:55:10

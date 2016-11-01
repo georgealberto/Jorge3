@@ -1,0 +1,6 @@
+4
+
+https://web.telegram.org/
+https://web.telegram.org/service_worker.js
+{098edcac-4685-40cc-892c-50de5ad845cb}
+#

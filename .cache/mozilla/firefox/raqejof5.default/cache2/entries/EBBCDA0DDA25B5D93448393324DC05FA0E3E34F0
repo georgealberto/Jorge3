@@ -1,0 +1,645 @@
+<html>
+<head>
+<title>OpenGL :: Tutorial :: Cap&iacute;tulo 3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="393" border="0" align="center">
+  <tr> 
+    <td height="75"> 
+      <div align="center"><font size="5"><b>.:</b> Cap&iacute;tulo 3: Dibujando 
+        en 3D <b>:.</b></font></div>
+    </td>
+  </tr>
+  <tr> 
+    <td height="364"> 
+      <p class=MsoToc2 style='tab-stops:45.0pt right dotted 424.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc535127325">3.1<span
+style='mso-bidi-font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>     </span></span>Definición de un lienzo en 3D</a></span></span><span
+style='mso-bidi-font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
+font-weight:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+      <p class=MsoToc2 style='tab-stops:45.0pt right dotted 424.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc535127326">3.2<span
+style='mso-bidi-font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>     </span></span>El punto en 3D: el vértice</a></span></span><span
+style='mso-bidi-font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
+font-weight:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+      <p class=MsoToc2 style='tab-stops:45.0pt right dotted 424.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc535127327">3.3<span
+style='mso-bidi-font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>     </span></span>Las primitivas</a></span></span><span
+style='mso-bidi-font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
+font-weight:normal;mso-no-proof:yes'><o:p></o:p><br>
+        </span><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc535127328">3.3.1<span
+style='mso-fareast-font-family:"Times New Roman";color:windowtext;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1'>       </span></span>Dibujo 
+        de puntos (GL_POINTS)</a></span></span><span
+style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><o:p></o:p><br>
+        </span><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc535127330">3.3.2<span
+style='mso-fareast-font-family:"Times New Roman";color:windowtext;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1'>       </span></span>Dibujo 
+        de líneas (GL_LINES)</a></span></span><span
+style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><o:p></o:p><br>
+        </span><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc535127331">3.3.3<span
+style='mso-fareast-font-family:"Times New Roman";color:windowtext;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1'>       </span></span>Dibujo 
+        de polígonos</a></span></span><span
+style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><o:p></o:p><br>
+        </span><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc535127332">3.3.3.1<span
+style='mso-fareast-font-family:"Times New Roman";color:windowtext;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1'>         </span></span>Triángulos 
+        (GL_TRIANGLES)</a></span></span><span
+style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><o:p></o:p><br>
+        </span><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc535127333">3.3.3.2<span
+style='mso-fareast-font-family:"Times New Roman";color:windowtext;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1'>         </span></span>Cuadrados 
+        (GL_QUADS)</a></span></span><span
+style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><o:p></o:p></span></p>
+      <p class=MsoToc2 style='tab-stops:45.0pt right dotted 424.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc535127334">3.4<span
+style='mso-bidi-font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>     </span></span>Construcción de objetos sólidos mediante 
+        polígonos</a></span></span><span
+style='mso-bidi-font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
+font-weight:normal;mso-no-proof:yes'><o:p></o:p><br>
+        </span><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc535127335">3.4.1<span
+style='mso-fareast-font-family:"Times New Roman";color:windowtext;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1'>       </span></span>Color 
+        de relleno</a></span></span><span
+style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><o:p></o:p><br>
+        </span><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc535127336">3.4.2<span
+style='mso-fareast-font-family:"Times New Roman";color:windowtext;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1'>       </span></span>Modelo 
+        de sombreado</a></span></span><span
+style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><o:p></o:p><br>
+        </span><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc535127337">3.4.3<span
+style='mso-fareast-font-family:"Times New Roman";color:windowtext;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1'>       </span></span>Eliminación 
+        de las caras ocultas<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'></span></a></span></span><span
+style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><o:p></o:p></span><span
+style='mso-bidi-font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
+font-weight:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+      </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p class=MsoNormal>El dibujo 3D en OpenGL se basa en la composición de pequeños 
+  elementos, con los que se va construyendo la escena deseada. Estos elementos 
+  se llaman <span class=GramE>primitivas</span>. Todas las primitivas de ogl son 
+  objetos de una o dos dimensiones, abarcando desde simples puntos y líneas, a 
+  polígonos complejos. Las primitivas se componen de vértices, que no son más 
+  que puntos 3D. En este capítulo se pretende presentar las herramientas necesarias 
+  para dibujar objetos en 3D a partir de estas formas más sencillas. Para ello 
+  hay que deshacerse de la mentalidad en 2D de la computación gráfica clásica 
+  y definir el nuevo espacio de trabajo, ya en 3D.</p>
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+<h2> 
+  <![if !supportLists]>
+  <span style='mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>3.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+  </span></span></span> 
+  <![endif]>
+  <span style='mso-spacerun:yes'> </span><a
+name="_Toc535127325"></a><a name="_Toc533221633"><span style='mso-bookmark:
+_Toc535127325'>Definición de un lienzo en 3D</span></a><o:p></o:p></h2>
+<p class=MsoNormal>La Ilustración 3.1 muestra un eje de coordenadas inmerso en 
+  un volumen de visualización sencillo, que se utilizará para definir y explicar 
+  el espacio en el que se va a trabajar. Este volumen se correspondería con una 
+  perspectiva ortonormal, como la que se ha definido en el capitulo anterior haciendo 
+  una llamada a <span class=SpellE><span class=GramE>glOrtho</span></span><span
+class=GramE>(</span>). Como se puede observar en la figura, para el punto de vista, 
+  el eje de las x sería horizontal y crecería de izquierda a derecha; el eje 
+  y, vertical y crece de abajo hacia arriba y, por último, el eje z, que 
+  sería el de profundidad, crecería hacia nuestras espaldas, por tanto, en la dirección del punto de vista, cuanto más lejos de la cámara esté el punto, menor será su coordenada z.</p>
+<p class=MsoNormal align=center style='text-align:center'><img src="opengl3_archivos/ilu31.jpg" width="250" height="194"><br>
+  Ilustración 
+  <!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>STYLEREF 1 \s <span style='mso-element:field-separator'></span><![endif]-->
+  <span
+style='mso-no-proof:yes'>3</span> 
+  <!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->
+  . 
+  <!--[if supportFields]><span style='mso-element:
+field-begin'></span> SEQ Ilustración \* ARABIC \s 1 <span style='mso-element:
+field-separator'></span><![endif]-->
+  <span style='mso-no-proof:yes'>1</span> 
+  <!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->
+</p>
+<p class=MsoNormal><o:p>&nbsp;</o:p><o:p></o:p></p>
+<h2> 
+  <![if !supportLists]>
+  <span style='mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>3.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+  </span></span></span> 
+  <![endif]>
+  <span style='mso-spacerun:yes'> </span><a
+name="_Toc535127326"></a><a name="_Toc533221634"><span style='mso-bookmark:
+_Toc535127326'>El punto en 3D: el vértice</span></a><o:p>&nbsp;</o:p></h2>
+<p class=MsoNormal>Los vértices (puntos 3D) son el denominador común en cualquiera 
+  de las primitivas de OpenGL. Con ellos se definen puntos, líneas y polígonos. 
+  La función que define vértices es <span class=SpellE>glVertex</span>, y puede 
+  tomar de dos a cuatro parámetros de cualquier tipo numérico. Por ejemplo, la 
+  siguiente línea de código define un vértice en el punto (10, 5, 3).<o:p>&nbsp;</o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'> 
+  <pre class=Cdigo><span style='mso-ansi-language:ES'>glVertex3f(10.0f, 5.0f, 3.0f);<o:p></o:p></span><o:p></o:p></pre>
+  </div>
+<p class=MsoNormal>Este punto se muestra en la Ilustración 3.2. Aquí se ha decidido 
+  representar las coordenadas como valores en coma flotante, y con tres argumentos, 
+  x, y, z.<o:p></o:p><o:p></o:p></p>
+<p class=MsoNormal align=center style='text-align:center'><img src="opengl3_archivos/ilu32.jpg" width="280" height="198"><br>
+  Ilustración 
+  <!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>STYLEREF 1 \s <span style='mso-element:field-separator'></span><![endif]-->
+  <span
+style='mso-no-proof:yes'>3</span> 
+  <!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->
+  . 
+  <!--[if supportFields]><span style='mso-element:
+field-begin'></span> SEQ Ilustración \* ARABIC \s 1 <span style='mso-element:
+field-separator'></span><![endif]-->
+  <span style='mso-no-proof:yes'>2</span> 
+  <!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->
+  <o:p></o:p></p>
+<p class=MsoNormal>Ahora hay que aprender a darle sentido a estos vértices, que 
+  pueden ser tanto la esquina de un cubo como el extremo de una línea.</p>
+<p class=MsoNormal><o:p></o:p></p>
+<h2><a name="_Toc535127327"></a><a name="_Toc533221635"><span style='mso-bookmark:
+_Toc535127327'> 
+  <![if !supportLists]>
+  <span style='mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>3.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+  </span></span></span> 
+  <![endif]>
+  Las primitivas</span></a><o:p></o:p></h2>
+<p class=MsoNormal>Una primitiva es simplemente la interpretación de un conjunto 
+  de vértices dibujados de una manera específica en pantalla. Hay diez primitivas 
+  distintas en ogl, pero en estos apuntes se explicarán solamente las más comunes: 
+  puntos (<span class=SpellE>GL_POINTS</span>), líneas (<span
+class=SpellE>GL_LINES</span>), triángulos (<span class=SpellE>GL_TRIANGLES</span>) 
+  y cuadrados (<span class=SpellE>GL_QUADS</span>). Se comentarán también las primitivas 
+  <span class=SpellE>GL_LINES_STRIP</span>, <span class=SpellE>GL_TRIANGLE_STRIP</span> 
+  y <span class=SpellE>GL_QUAD_STRIP</span>, utilizadas para definir &#8220;tiras&#8221; de 
+  líneas, triángulos y de cuadrados respectivamente.<o:p></o:p></p>
+<p class=MsoNormal>Para crear primitivas en ogl se utilizan las funciones <span
+class=SpellE>glBegin</span> y <span class=SpellE>glEnd</span>. La sintaxis de 
+  estas funciones sigue el siguiente modelo:<o:p></o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'> 
+  <pre class=Cdigo><span style='mso-ansi-language:ES'>glBegin(&lt;tipo de primitiva&gt;);<o:p></o:p><br></span><span style='mso-ansi-language:ES'><span
+style='mso-spacerun:yes'>   </span>glVertex(...);<o:p></o:p><br></span><span style='mso-ansi-language:ES'><span
+style='mso-spacerun:yes'> </span><span style='mso-spacerun:yes'> </span><span
+style='mso-spacerun:yes'> </span>glVertex(...);<o:p></o:p><br></span><span style='mso-ansi-language:ES'><span
+style='mso-spacerun:yes'>   </span>...<o:p></o:p><br></span><span style='mso-ansi-language:ES'><span
+style='mso-spacerun:yes'>   </span>glVertex(...);<o:p></o:p><br></span><span style='mso-ansi-language:ES'>glEnd();</span><o:p>&nbsp;</o:p></pre>
+</div>
+<p class=MsoNormal>Puede observarse que <span class=SpellE>glBegin</span> y <span
+class=SpellE>glEnd</span> actúan como llaves (&#8220;{<span class=GramE>&#8220; y</span> &#8220;}&#8221;) 
+  de las primitivas, por eso es común añadirle tabulados a las <span
+class=SpellE>glVertex</span> contenidos en ellas. El parámetro de <span
+class=SpellE>glBeing</span> &lt;tipo de primitiva&gt; es del tipo <span
+class=SpellE>glEnum</span><span style='mso-spacerun:yes'>  </span>(definido por 
+  OpenGL) y será el <span class=SpellE>flag</span> con el nombre de la primitiva 
+  (<span class=SpellE>GL_POINTS</span>, <span class=SpellE>GL_QUADS</span>, etc.).</p>
+<p class=MsoNormal><o:p>&nbsp;</o:p><o:p>&nbsp;</o:p></p>
+<h3> 
+  <![if !supportLists]>
+  <span style='mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>3.3.1</span></span> 
+  <![endif]>
+  <a name="_Toc535127328"></a><a
+name="_Toc533221636"><span style='mso-bookmark:_Toc535127328'>Dibujo de puntos 
+  (</span></a><span class=SpellE><span style='mso-bookmark:_Toc533221636'><span
+style='mso-bookmark:_Toc535127328'>GL_POINTS</span></span></span><span
+style='mso-bookmark:_Toc533221636'><span style='mso-bookmark:_Toc535127328'>)</span></span><o:p>&nbsp;</o:p></h3>
+<p class=MsoNormal>Es la más simple de las primitivas de ogl. Para 
+  comenzar, veamos el siguiente código:<o:p>&nbsp;</o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'> 
+  <pre class=Cdigo><span lang=EN-GB>glBegin(GL_POINTS);<br></span><span lang=EN-GB><span style='mso-spacerun:yes'>  </span>glVertex3f(0.0f, 0.0f, 0.0f);<br></span><span lang=EN-GB><span style='mso-spacerun:yes'>  </span>glVertex3f(10.0f, 10.0f, 10.0f);<o:p></o:p><br></span><span lang=EN-GB>glEnd();<o:p></o:p></span><span lang=EN-GB style='mso-ansi-language:EN-GB'><o:p>&nbsp;</o:p></span></pre>
+</div>
+<p class=MsoNormal>El parámetro pasado a <span class=SpellE>glBegin</span> es 
+  <span
+class=SpellE>GL_POINTS</span>, con lo cual interpreta los vértices contenidos 
+  en el bloque <span class=SpellE>glBeing</span>-<span class=SpellE>glEnd</span> 
+  como puntos. Aquí se dibujarán dos puntos, en (0, 0, 0) y en (10, 10, 10). Se pueden listar múltiples primitivas entre llamadas mientras que 
+  sean para el mismo tipo de primitiva. El siguiente código dibujara exactamente 
+  lo mismo, pero invertirá más tiempo en hacerlo, decelerando 
+  la velocidad de nuestra aplicación:<o:p></o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'> 
+  <pre class=Cdigo><span lang=EN-GB>glBegin(GL_POINTS);<br></span><span lang=EN-GB><span style='mso-spacerun:yes'>  </span>glVertex3f(0.0f, 0.0f, 0.0f);<br></span><span lang=EN-GB>glEnd();</span></pre>
+  <pre class=Cdigo><span lang=EN-GB><o:p>&nbsp;</o:p><br></span><span lang=EN-GB>glBegin(GL_POINTS);<br></span><span lang=EN-GB><span style='mso-spacerun:yes'>  </span>glVertex3f(10.0f, 10.0f, 10.0f);<br></span><span lang=EN-GB>glEnd();<o:p></o:p></span></pre>
+  </div>
+<p class=MsoNormal><o:p>&nbsp;</o:p><o:p></o:p></p>
+<h3><a name="_Toc533221637"> 
+  <![if !supportLists]>
+  <span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>3.3.2</span></span> 
+  <![endif]>
+  </a><a
+name="_Toc535127330"><span style='mso-bookmark:_Toc533221637'>Dibujo de líneas 
+  (</span></a><span class=SpellE><span style='mso-bookmark:_Toc535127330'><span
+style='mso-bookmark:_Toc533221637'>GL_LINES</span></span></span><span
+style='mso-bookmark:_Toc535127330'><span style='mso-bookmark:_Toc533221637'>)</span></span><o:p></o:p></h3>
+<p class=MsoNormal>En el dibujado de puntos, la sintaxis era muy cómoda: cada 
+  vértice es un punto. En las líneas, los vértices se cuentan por parejas, denotando 
+  punto inicial y punto final de la línea. Si se especifica un número impar de vértices, el último de ellos se ignora.</p><p class=MsoNormal>Acuérdate de añadir la librería math.h en un include al principio del código para que compilen las funciones se seno y coseno.</p>
+<p class=MsoNormal>El siguiente código dibuja una serie de <span class=SpellE>líneas</span> 
+  radiales:<o:p></o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'> 
+  <pre class=Cdigo><span lang=EN-GB>GLfloat angulo;<o:p></o:p><br></span><span lang=EN-GB>int i; <o:p></o:p><br></span><span lang=EN-GB>glBegin(GL_LINES);<o:p></o:p><br></span><span lang=EN-GB>for (i=0; i&lt;360; i+=3)<o:p></o:p><br></span><span lang=EN-GB>{<o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>angulo = (GLfloat)i*3.14159f/180.0f; // grados a radianes<o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span></span><span
+style='mso-ansi-language:ES'>glVertex3f(0.0f, 0.0f, 0.0f);<o:p></o:p><br></span><span style='mso-ansi-language:ES'><span style='mso-tab-count:
+1'>      </span>glVertex3f(cos(angulo), sin(angulo), 0.0f);<o:p></o:p><br></span><span style='mso-ansi-language:ES'>}<o:p></o:p><br></span><span style='mso-ansi-language:ES'>glEnd();<o:p></o:p></span><o:p></o:p></pre>
+</div>
+<p class=MsoNormal>Este ejemplo<span style='mso-spacerun:yes'> </span>dibuja 
+  120 líneas en el mismo plano (ya que en los puntos que las definen z = 0.0f), 
+  con el mismo punto inicial (0<span class=GramE>,0,0</span>) y puntos finales 
+  describiendo una circunferencia. El resultado sería el de la Ilustración 3.3.<o:p></o:p><o:p></o:p></p>
+<p class=MsoNormal align=center style='text-align:center'> <img src="opengl3_archivos/ilu33.jpg" width="300" height="247"><br>
+  Ilustración 
+  <!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>STYLEREF 1 \s <span style='mso-element:field-separator'></span><![endif]-->
+  <span
+style='mso-no-proof:yes'>3</span> 
+  <!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->
+  . 
+  <!--[if supportFields]><span style='mso-element:
+field-begin'></span> SEQ Ilustración \* ARABIC \s 1 <span style='mso-element:
+field-separator'></span><![endif]-->
+  <span style='mso-no-proof:yes'>3</span> 
+  <!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->
+  <o:p></o:p><o:p></o:p></p>
+<p class=MsoNormal>Si en vez de <span class=SpellE>GL_LINES</span> utilizásemos 
+  <span class=SpellE>GL_LINE_STRIP</span>, ogl ya no trataría los vértices en 
+  parejas, si no que el primer vértice y el segundo definirían una línea, y el 
+  final de ésta definiría otra línea con el siguiente vértice y así sucesivamente, 
+  definiendo un segmento <span class=SpellE>continuo</span>. Veamos el siguiente 
+  código como ejemplo:<o:p></o:p><o:p></o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'> 
+  <pre class=Cdigo><span style='mso-ansi-language:ES'>glBegin(GL_LINE_STRIP);<o:p></o:p><br></span><span style='mso-ansi-language:ES'><span style='mso-tab-count:
+1'>      </span></span><span lang=EN-GB>glVertex3f(0.0f, 0.0f, 0.0f);<span
+style='mso-spacerun:yes'>  </span>// V0<o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(2.0f,      1.0f, 0.0f);<span style='mso-spacerun:yes'>  </span>// V1<o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(2.0f,      2.0f, 0.0f);<span style='mso-spacerun:yes'>  </span>// V2<o:p></o:p><br></span><span lang=EN-GB>glEnd();</span></pre>
+</div>
+<span lang=EN-GB style='mso-ansi-language:EN-GB'><o:p>&nbsp;</o:p></span>Este 
+código construiría las líneas como se ve en la Ilustración 3.4.<o:p></o:p><o:p></o:p><o:p></o:p><o:p></o:p> 
+<p class=MsoNormal align=center style='text-align:center'><img src="opengl3_archivos/ilu34.jpg" width="250" height="177"><br>
+  Ilustración 
+  <!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>STYLEREF 1 \s <span style='mso-element:field-separator'></span><![endif]-->
+  <span
+style='mso-no-proof:yes'>3</span> 
+  <!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->
+  . 
+  <!--[if supportFields]><span style='mso-element:
+field-begin'></span> SEQ Ilustración \* ARABIC \s 1 <span style='mso-element:
+field-separator'></span><![endif]-->
+  <span style='mso-no-proof:yes'>4</span> 
+  <!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->
+  <o:p></o:p><o:p></o:p></p>
+<p class=MsoNormal>Mencionar, por último, la primitiva <span class=SpellE>GL_LINE_LOOP</span> 
+  que funciona igual que <span class=SpellE>GL_LINE_STRIP</span> pero, además, 
+  une el último vértice con el primero, creando siempre una cuerda cerrada.</p>
+<p class=MsoNormal><o:p></o:p><o:p></o:p></p>
+<h3><a name="_Toc533221638"> 
+  <![if !supportLists]>
+  <span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>3.3.3</span></span> 
+  <![endif]>
+  </a><a
+name="_Toc535127331"><span style='mso-bookmark:_Toc533221638'>Dibujo de polígonos</span></a><o:p></o:p></h3>
+<p class=MsoNormal>En la creación de objetos sólidos, el uso de puntos y líneas 
+  es insuficiente. Se necesitan primitivas que sean superficies cerradas, rellenas 
+  de uno o varios colores que, en conjunto, modelen el objeto deseado. En el 
+  campo de la representación 3D de los gráficos en computación, se suelen utilizar 
+  polígonos (que a menudo son triángulos) para dar forma a objetos &#8220;semisólidos&#8221; 
+  (ya que en realidad son superficies, están huecos por dentro). Ahora se verá 
+  la manera de hacer esto mediante las primitivas <span
+class=SpellE>GL_TRIANGLES</span> y <span class=SpellE>GL_QUADS</span>.<o:p></o:p></p>
+<h4> 
+  <![if !supportLists]>
+  <span style='mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>3.3.3.1<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+  </span></span></span> 
+  <![endif]>
+  <span style='mso-spacerun:yes'> </span><a
+name="_Toc535127332">Triángulos (</a><span class=SpellE><span style='mso-bookmark:
+_Toc535127332'>GL_TRIANGLES</span></span><span style='mso-bookmark:_Toc535127332'>)</span><o:p></o:p></h4>
+<p class=MsoNormal>El polígono más simple, es el triángulo, con sólo tres lados. 
+  En esta primitiva, los vértices van de tres en tres. El siguiente código dibuja 
+  dos triángulos, como se muestra en la Ilustración 3.5:<o:p></o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'> 
+  <pre class=Cdigo><span lang=EN-GB>glBegin(GL_TRIANGLES);<br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(0.0f, 0.0f, 0.0f); // V0<o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(1.0f, 1.0f, 0.0f); // V1<br>      glVertex3f(2.0f, 0.0f, 0.0f); // V2<o:p></o:p><br></span><span lang=EN-GB><o:p>&nbsp;</o:p><span style='mso-tab-count:1'>     </span>glVertex3f(-1.0f, 0.0f, 0.0f); // V3<o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(-3.0f, 2.0f, 0.0f); // V4<br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(-2.0f, 0.0f, 0.0f); // V5<o:p></o:p><br></span><span lang=EN-GB>glEnd();</span></pre>
+</div>
+<span lang=EN-GB style='mso-ansi-language:EN-GB'><o:p>&nbsp;</o:p></span>
+   
+  <div align="center"> 
+    <p><img src="opengl3_archivos/ilu35.jpg" width="350" height="185"><br>
+      Ilustración 3.5 </p>
+    <p>&nbsp; </p>
+  </div>
+    <o:p></o:p>
+    <p class=MsoNormal>Es muy importante el orden en que se especifican los vértices. 
+      En el primer triángulo (el de la derecha), se sigue la política de &#8220;sentido 
+      horario&#8221;, y en el segundo, &#8220;sentido <span class=SpellE>antihorario</span>&#8221;. 
+      Cuando un polígono cualquiera, tiene sentido horario (los vértices avanzan 
+      en el mismo sentido que las agujas del reloj), se dice que es positivo; 
+      en caso contrario, se dice que es negativo. OpenGL considera que, por defecto, 
+      los polígonos que tienen sentido negativo tienen un &#8220;encare frontal&#8221;. Esto 
+      significa que el triangulo de la izquierda nos muestra su cara frontal, 
+      y el de la derecha su cara trasera. Más adelante se verá que es sumamente 
+      importante mantener una consistencia en el sentido de los triángulos al 
+      construir objetos sólidos.</p><p class=MsoNormal>En OpenGL, por defecto, se muestran las caras frontales y traseras de los polígonos. Sin embargo, es habitual querer que únicamente se rendericen las caras frontales y no las traseras. Para habilitar que OpenGL sólo visualice las caras frontales se utiliza la llamada glEnable(GL_CULL_FACE) que, utilizada en el ejemplo anterior, provoca que sólo se visualice el triángulo izquierdo (Puedes ponerla en la sección de inicialización-init del programa).</p>
+
+
+<p class=MsoNormal>Si se necesita invertir el comportamiento por defecto de ogl, 
+  basta con una llamada a la función <span class=SpellE><span class=GramE>glFrontFace</span></span><span
+class=GramE>(</span>). Ésta acepta como parámetro <span class=SpellE>GL_CW</span> 
+  (considera los polígonos positivos con encare frontal) ó <span class=SpellE>GL_CCW</span> 
+  (considera los polígonos negativos con encare frontal).<o:p></o:p></p>
+<p class=MsoNormal>Como con la primitiva de líneas, con triángulos también existe 
+  <span class=SpellE>GL_TRIANGLE_STRIP</span>, y funciona como se puede observar 
+  en la Ilustración 3.6, que sigue el siguiente pseudo-código:<o:p></o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'> 
+  <pre class=Cdigo><span lang=EN-GB>glBegin(GL_TRIANGLE_STRIP);<br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex(v0);<br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex(v1);<br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>...<br></span><span lang=EN-GB>glEnd();</span><o:p></o:p><o:p>&nbsp;</o:p></pre>
+</div>
+<p class=MsoNormal align=center style='text-align:center'> <img src="opengl3_archivos/ilu36.jpg" width="450" height="151"><br>
+  Ilustración 
+  <!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>STYLEREF 1 \s <span style='mso-element:field-separator'></span><![endif]-->
+  <span
+style='mso-no-proof:yes'>3</span> 
+  <!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->
+  . 
+  <!--[if supportFields]><span style='mso-element:
+field-begin'></span> SEQ Ilustración \* ARABIC \s 1 <span style='mso-element:
+field-separator'></span><![endif]-->
+  <span style='mso-no-proof:yes'>6</span> 
+  <!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->
+</p>
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+<p class=MsoNormal>Por último comentar que la manera más <span class=SpellE>eficiente</span> de componer objetos y dibujarlos es mediante triángulos, ya que 
+  sólo necesitan tres vértices.</p>
+<h4> 
+  <![if !supportLists]>
+  <span style='mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>3.3.3.2<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+  </span></span></span> 
+  <![endif]>
+  <span style='mso-spacerun:yes'> </span><a
+name="_Toc535127333">Cuadrados (</a><span class=SpellE><span style='mso-bookmark:
+_Toc535127333'>GL_QUADS</span></span><span style='mso-bookmark:_Toc535127333'>)</span><o:p>&nbsp;</o:p></h4>
+<p class=MsoNormal>Esta primitiva funciona exactamente igual que <span
+class=SpellE>GL_TRIANGLES</span>, pero dibujando cuadrados. También tiene la variación 
+  de <span class=SpellE>GL_QUAD_STRIP</span>, para dibujar &#8220;tiras&#8221; de cuadrados.</p>
+<p class=MsoNormal><o:p></o:p><o:p>&nbsp;</o:p></p>
+<h2><a name="_Toc535127334"></a><a name="_Toc533221639"><span style='mso-bookmark:
+_Toc535127334'> 
+  <![if !supportLists]>
+  <span style='mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>3.4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+  </span></span></span> 
+  <![endif]>
+  Construcción de objetos sólidos mediante polígonos</span></a><o:p>&nbsp;</o:p></h2>
+<p class=MsoNormal>Componer un objeto sólido a partir de polígonos implica algo 
+  más que ensamblar vértices en un espacio coordenado 3D. Se muestran, a continuación, una serie 
+  de puntos a tener en cuenta para construir objetos, aunque dando sólo <span
+class=GramE>un</span> breve acercamiento.</p>
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+<h3> 
+  <![if !supportLists]>
+  <span style='mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>3.4.1</span></span> 
+  <![endif]>
+  <a name="_Toc535127335"></a><a
+name="_Toc533221640"><span style='mso-bookmark:_Toc535127335'>Color de relleno</span></a><o:p>&nbsp;</o:p></h3>
+<p class=MsoNormal>Para elegir el color de los polígonos, basta con hacer una 
+  llamada a <span class=SpellE>glColor</span> entre la definición de cada polígono. Por ejemplo, modificando el <span class=SpellE>código</span> que dibujaba dos 
+  triángulos:<o:p>&nbsp;</o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'> 
+  <pre class=Cdigo><span style='mso-ansi-language:ES'>glBegin(GL_TRIANGLES);<o:p></o:p><br></span><span style='mso-ansi-language:ES'><span style='mso-tab-count:
+1'>      </span></span><span lang=EN-GB>glColor3f(1.0f, 0.0f, 0.0f);<o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(0.0f,0.0f, 0.0f);<o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(2.0f,0.0f, 0.0f);<o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(1.0f,1.0f, 0.0f);<o:p></o:p><br></span><span lang=EN-GB><o:p>&nbsp;</o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glColor3f(0.0f,1.0f, 0.0f);<o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(-1.0f,0.0f, 0.0f);<o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(-3.0f,2.0f, 0.0f);<o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(-2.0f,0.0f, 0.0f);<o:p></o:p><br></span><span style='mso-ansi-language:ES'>glEnd();<o:p></o:p></span><o:p>&nbsp;</o:p></pre>
+</div>
+<p class=MsoNormal>Esta modificación provocará que el primer triángulo se pinte 
+  en rojo y el segundo en verde. La función <span class=SpellE>glColor</span> 
+  define el color de rellenado actual y lleva como parámetros los valores de las 
+  componentes RGB del color deseado y, opcionalmente, un cuarto parámetro con 
+  el valor alpha. Estos 
+  parámetros son flotantes y se mueven en el rango [0.0,1.0]. Con ello se 
+  pueden componer todos los colores <span class=GramE>del</span> modo de video 
+  usado en ese instante.</p>
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+<h3> 
+  <![if !supportLists]>
+  <span style='mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>3.4.2</span></span> 
+  <![endif]>
+  <a name="_Toc535127336"></a><a
+name="_Toc533221641"><span style='mso-bookmark:_Toc535127336'>Modelo de sombreado</span></a><o:p>&nbsp;</o:p></h3>
+<p class=MsoNormal>Es el método que utiliza OpenGL para rellenar de color los 
+  polígonos. Se especifica con la función <span class=SpellE>glShadeModel</span>. 
+  Si el parámetro es <span class=SpellE>GL_FLAT</span>, ogl rellenará los polígonos 
+  con el color activo en el momento que se definió el último parámetro; si es 
+  <span class=SpellE>GL_SMOOTH</span>, ogl rellenará el polígono interpolando 
+  los colores activos en la definición de cada vértice.</p>
+<p class=MsoNormal><o:p>&nbsp;</o:p>Este código es un ejemplo de <span class=SpellE>GL_FLAT</span>:<o:p>&nbsp;</o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'> 
+  <pre class=Cdigo><span lang=EN-GB>glShadeModel(GL_FLAT);<o:p></o:p><br></span><span lang=EN-GB>glBegin(GL_TRIANGLES);<span style='mso-tab-count:
+1'>   </span><o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span></span><span
+style='mso-ansi-language:ES'>glColor3f(1.0f, 0.0f, 0.0f);<span
+style='mso-spacerun:yes'>  </span>// activamos el color rojo<o:p></o:p><br>      glVertex3f(-1.0f, 0.0f, 0.0f);<o:p></o:p><br>      glColor3f(0.0f, 1.0f, 0.0f);<span style='mso-spacerun:yes'>  </span>// activamos el color verde<o:p></o:p><br></span><span style='mso-ansi-language:ES'><span style='mso-tab-count:
+1'>      </span>glVertex3f(1.0f, 0.0f, 0.0f);<o:p></o:p><br>      glColor3f(0.0f, 0.0f, 1.0f);<span style='mso-spacerun:yes'>  </span>// activamos el color azul<o:p></o:p><br></span><span style='mso-ansi-language:ES'><span style='mso-tab-count:
+1'>      </span></span><span lang=EN-GB>glVertex3f(0.0f, 1.0f, 0.0f);<o:p></o:p><br></span><span lang=EN-GB>glEnd();<o:p></o:p></span><span lang=EN-GB style='mso-ansi-language:EN-GB'><o:p></o:p></span></pre>
+</div>
+<p class=MsoNormal>La salida sería la Ilustración 3.7<o:p></o:p></p>
+<p class=MsoNormal align=center style='text-align:center'> <img src="opengl3_archivos/ilu37.jpg" width="237" height="194"><br>
+  Ilustración 
+  <!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>STYLEREF 1 \s <span style='mso-element:field-separator'></span><![endif]-->
+  <span
+style='mso-no-proof:yes'>3</span> 
+  <!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->
+  . 
+  <!--[if supportFields]><span style='mso-element:
+field-begin'></span> SEQ Ilustración \* ARABIC \s 1 <span style='mso-element:
+field-separator'></span><![endif]-->
+  <span style='mso-no-proof:yes'>7</span> 
+  <!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->
+</p>
+<p class=MsoNormal><o:p>&nbsp;</o:p>El triángulo se rellena con el color azul, 
+  puesto que el modelo de sombreado es <span class=SpellE>GL_FLAT</span> y el 
+  color activo en la definición del último vértice es el azul. Sin embargo, este 
+  mismo código, cambiando la primera línea:<o:p></o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'> 
+  <pre class=Cdigo><span style='mso-ansi-language:ES'>glShadeModel(GL_SMOOTH);<o:p></o:p><br></span><span style='mso-ansi-language:ES'>glBegin(GL_TRIANGLES);<span
+style='mso-tab-count:1'>   </span><o:p></o:p><br></span><span style='mso-ansi-language:ES'><span style='mso-tab-count:
+1'>      </span>glColor3f(1.0f, 0.0f, 0.0f);<span style='mso-spacerun:yes'>  </span>// activamos el color rojo<o:p></o:p><br>      glVertex3f(-1.0f, 0.0f, 0.0f);<o:p></o:p><br>      glColor3f(0.0f,1.0f, 0.0f);<span style='mso-spacerun:yes'>  </span>// activamos el color verde<o:p></o:p><br></span><span style='mso-ansi-language:ES'><span style='mso-tab-count:
+1'>      </span>glVertex3f(1.0f,0.0f, 0.0f);<o:p></o:p><br>      glColor3f(0.0f, 0.0f, 1.0f);<span style='mso-spacerun:yes'>  </span>// activamos el color azul<o:p></o:p><br></span><span style='mso-ansi-language:ES'><span style='mso-tab-count:
+1'>      </span></span><span lang=EN-GB>glVertex3f(0.0f, 1.0f, 0.0f);<o:p></o:p><br></span><span lang=EN-GB>glEnd();<o:p></o:p></span><span lang=EN-GB style='mso-ansi-language:EN-GB'><o:p></o:p></span></pre>
+</div>
+<p class=MsoNormal><span class=SpellE><span class=GramE>produciría</span></span> 
+  una salida similar a la de la Ilustración 3.8, donde se aprecia claramente la 
+  interpolación de colores.<o:p></o:p></p>
+<p class=MsoNormal align=center style='text-align:center'> <img src="opengl3_archivos/ilu38.jpg" width="238" height="203"><br>
+  Ilustración 
+  <!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>STYLEREF 1 \s <span style='mso-element:field-separator'></span><![endif]-->
+  <span
+style='mso-no-proof:yes'>3</span> 
+  <!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->
+  . 
+  <!--[if supportFields]><span style='mso-element:
+field-begin'></span> SEQ Ilustración \* ARABIC \s 1 <span style='mso-element:
+field-separator'></span><![endif]-->
+  <span style='mso-no-proof:yes'>8</span> 
+  <!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->
+</p>
+<p class=MsoNormal><o:p>&nbsp;</o:p><o:p></o:p></p>
+<h3> 
+  <![if !supportLists]>
+  <span style='mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>3.4.3</span></span> 
+  <![endif]>
+  <a name="_Toc535127337"></a><a
+name="_Toc533221642"><span style='mso-bookmark:_Toc535127337'>Eliminación de las 
+  caras ocultas</span></a><o:p></o:p></h3>
+<p class=MsoNormal>Cuando se tiene un objeto sólido, o quizá varios objetos, algunos 
+  de ellos estarán más próximos a nosotros que otros. Si un objeto está por detrás 
+  de otro, evidentemente, sólo se debería ver el de delante, que tapa a los de atrás. OpenGL, por defecto, no tiene en cuenta esta situación, de forma que simplemente 
+  va pintando en pantalla los puntos, líneas y polígonos siguiendo el orden en 
+  el que se especifican en el código. Veamos un ejemplo:<o:p></o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'> 
+  <pre class=Cdigo><span style='mso-ansi-language:ES'>glColor3f(1.0f, 1.0f, 1.0f);      // activamos el color blanco<o:p></o:p><br></span><span lang=EN-GB>glBegin(GL_TRIANGLES);<br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(-1.0f,      -1.0f, -1.0f);<br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(1.0f,      -1.0f, -1.0f);<o:p></o:p><br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(0.0f,      1.0f, -1.0f);<o:p></o:p><br></span><span style='mso-ansi-language:ES'>glEnd();<o:p></o:p></span></pre>
+  <pre class=Cdigo><span style='mso-ansi-language:ES'><o:p>&nbsp;</o:p><br>glColor3f(1.0f, 0.0f, 0.0f);      // activamos el color rojo<o:p></o:p><br></span><span lang=EN-GB>glBegin(GL_POINTS);<br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(0.0f,      0.0f, -2.0f);<br></span><span lang=EN-GB><span style='mso-tab-count:1'>      </span>glVertex3f(2.0f,      1.0f, -2.0f);<o:p></o:p><br></span><span lang=EN-GB>glEnd();<o:p></o:p></span><span lang=EN-GB style='mso-ansi-language:EN-GB;mso-no-proof:
+yes'><o:p>&nbsp;</o:p></span></pre>
+</div>
+<p class=MsoNormal><span style='mso-no-proof:yes'>Aquí se está pintando un triángulo 
+  en el plano z = -1. Luego se pintan dos puntos, el primero 
+  en (0,0,-2) y el segundo en (2,1,-2). Ambos están en el plano z = -2, es decir, 
+  más lejos de nuestro punto de vista que el triángulo. El primer punto lo 
+  debería tapar el triángulo pero, como por defecto OpenGL no comprueba qué es 
+  lo que está por delante y por detrás, lo que hace es pintar primero el triángulo 
+  y después los puntos, quedando un resultado como el de la Ilustración 3.9.<o:p></o:p></span><span style='mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-no-proof:yes'> <img src="opengl3_archivos/ilu39.jpg" width="287" height="219"><br>
+  </span>Ilustración 
+  <!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>STYLEREF 1 \s <span style='mso-element:field-separator'></span><![endif]-->
+  <span
+style='mso-no-proof:yes'>3</span> 
+  <!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->
+  . 
+  <!--[if supportFields]><span style='mso-element:
+field-begin'></span> SEQ Ilustración \* ARABIC \s 1 <span style='mso-element:
+field-separator'></span><![endif]-->
+  <span style='mso-no-proof:yes'>9</span> 
+  <!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->
+  <span style='mso-no-proof:yes'><o:p></o:p></span><o:p></o:p><o:p>&nbsp;</o:p></p>
+<p class=MsoNormal>Para solucionar esto, se introduce aquí un de los <span
+class=SpellE>buffers</span> que ogl pone a nuestra disposición, el &#8220;<span
+class=SpellE>depth</span> buffer&#8221; (buffer de profundidad, también conocido como 
+  &#8220;z-buffer&#8221;). En él se almacenan &#8220;las zetas&#8221; o distancias desde el punto de vista 
+  a cada píxel de los objetos de la escena y, a la hora de pintarlos por pantalla, 
+  hace una comprobación de que no haya ninguna primitiva que esté por delante 
+  tapando a lo que se va a pintar en ese lugar.</p>
+<p class=MsoNormal>Para activar esta característica, llamada &#8220;<span
+class=SpellE>depth</span> <span class=SpellE>test</span>&#8221;, hay que hacer 
+  una modificación de su variable en la máquina de estados de OpenGL, usando <span class=SpellE>glEnable</span>, 
+  de la siguiente forma:<o:p></o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+  <pre class=Cdigo><span style='mso-ansi-language:ES'>glEnable(GL_DEPTH_TEST);<o:p></o:p></span></pre>
+</div>
+<p class=MsoNormal>Puedes poner esta instrucción también en la parte de inicialización-init. Para desactivarlo, se usará la función <span class=SpellE>glDisable</span> 
+  con el mismo parámetro.</p><p class=MsoNormal>El uso del &#8220;<span class=SpellE>test</span> de profundidad&#8221; 
+  necesita también que, 
+  de la misma forma que se hacía al <span class=SpellE>principio</span> un <span
+class=SpellE>glClear</span> con la variable <span class=SpellE>GL_COLOR_BUFFER_BIT</span>, 
+  para que se borre la pantalla antes de dibujar cada frame, también hay que borrar el <span class=SpellE>depth</span> buffer, 
+  por si algún objeto se ha movido (ha cambiado su coordenada z) y ha cambiado la situación de la escena. Añadir para ello 
+  la siguiente línea:<o:p></o:p></p>
+<div style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt'> 
+  <pre class=Cdigo><span lang=EN-GB>glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</span><span lang=EN-GB style='mso-ansi-language:EN-GB'><o:p></o:p></span></pre>
+  </div>
+<p class=MsoNormal>Se puede utilizar el operador binario &#8220;<span class=SpellE>or</span>&#8221; 
+  ya que las definiciones de ogl terminadas en &#8220;_BIT&#8221; son <span class=SpellE>flags</span>, 
+  <span class=SpellE>pudiéndose</span> combinar varias en una misma función.</p>
+<p class=MsoNormal>Añadiendo la línea con la instrucción glEnable al principio del código 
+  del anterior ejemplo y modificando la instrucción glClear, se obtendrá el efecto de ocultación deseado, como se puede 
+  ver en la Ilustración 3.10.<o:p></o:p></p>
+<p class=MsoNormal align=center style='text-align:center'> <img src="opengl3_archivos/ilu310.jpg" width="247" height="204"><br>
+  Ilustración 
+  <!--[if supportFields]><span
+style='mso-spacerun:yes'> </span>STYLEREF 1 \s<![endif]-->
+  <span
+style='mso-no-proof:yes'>3</span> 
+  <!--[if supportFields]><![endif]-->
+  . 
+  <!--[if supportFields]>SEQ Ilustración \* ARABIC \s 1 <![endif]-->
+  <span style='mso-no-proof:yes'>10</span> 
+  <!--[if supportFields]><![endif]-->
+  <o:p></o:p></p>
+<p class=MsoNormal>Gracias a la eliminación de las caras ocultas, se gana realismo en la escena y, al tiempo, se ahorra el procesado de todos aquellos 
+  polígonos que no se ven, ganando también en velocidad.</p>
+<p>&nbsp;</p>
+</body>
+</html>ŸÖÏËG¸      X\ˆX\Ž=ï›X—   ?    :http://sabia.tic.udc.es/gc/Tutorial%20OpenGL/tutorial/cap3.htm necko:classified 1 request-method GET response-head HTTP/1.1 200 OK
+Date: Mon, 17 Oct 2016 23:20:04 GMT
+Server: Apache/1.3.33 (Win32) PHP/4.3.11
+Last-Modified: Mon, 10 Nov 2008 20:47:36 GMT
+Etag: "0-b39c-49189de8"
+Accept-Ranges: bytes
+Content-Length: 45980
+Content-Type: text/html
+X-Cache: MISS from serverone111.com
+X-Cache-Lookup: MISS from serverone111.com:3128
+Via: 1.1 serverone111.com (squid/3.4.10)
+ charset windows-1252 uncompressed-len 0 predictor::resource-count 10 predictor::http://sabia.tic.udc.es/gc/Tutorial%20OpenGL/tutorial/opengl3_archivos/ilu31.jpg 1,1,1476746376,0 predictor::http://sabia.tic.udc.es/gc/Tutorial%20OpenGL/tutorial/opengl3_archivos/ilu32.jpg 1,1,1476746376,0 predictor::http://sabia.tic.udc.es/gc/Tutorial%20OpenGL/tutorial/opengl3_archivos/ilu33.jpg 1,1,1476746376,0 predictor::http://sabia.tic.udc.es/gc/Tutorial%20OpenGL/tutorial/opengl3_archivos/ilu34.jpg 1,1,1476746376,0 predictor::http://sabia.tic.udc.es/gc/Tutorial%20OpenGL/tutorial/opengl3_archivos/ilu35.jpg 1,1,1476746376,0 predictor::http://sabia.tic.udc.es/gc/Tutorial%20OpenGL/tutorial/opengl3_archivos/ilu36.jpg 1,1,1476746376,0 predictor::http://sabia.tic.udc.es/gc/Tutorial%20OpenGL/tutorial/opengl3_archivos/ilu37.jpg 1,1,1476746376,0 predictor::http://sabia.tic.udc.es/gc/Tutorial%20OpenGL/tutorial/opengl3_archivos/ilu38.jpg 1,1,1476746376,0 predictor::http://sabia.tic.udc.es/gc/Tutorial%20OpenGL/tutorial/opengl3_archivos/ilu39.jpg 1,1,1476746376,0 predictor::http://sabia.tic.udc.es/gc/Tutorial%20OpenGL/tutorial/opengl3_archivos/ilu310.jpg 1,1,1476746376,0   ³œ

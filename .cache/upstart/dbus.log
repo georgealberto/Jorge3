@@ -1,0 +1,76 @@
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Activating service name='org.gtk.vfs.AfcVolumeMonitor'
+Activated service 'org.gtk.vfs.AfcVolumeMonitor' failed: Failed to execute program org.gtk.vfs.AfcVolumeMonitor: Input/output error
+Activating service name='org.gtk.vfs.GoaVolumeMonitor'
+Activated service 'org.gtk.vfs.GoaVolumeMonitor' failed: Failed to execute program org.gtk.vfs.GoaVolumeMonitor: Input/output error
+Activating service name='org.gtk.vfs.GPhoto2VolumeMonitor'
+Activated service 'org.gtk.vfs.GPhoto2VolumeMonitor' failed: Failed to execute program org.gtk.vfs.GPhoto2VolumeMonitor: Input/output error
+Activating service name='org.gtk.vfs.MTPVolumeMonitor'
+Activated service 'org.gtk.vfs.MTPVolumeMonitor' failed: Failed to execute program org.gtk.vfs.MTPVolumeMonitor: Input/output error
+Activating service name='com.canonical.Unity.Scope.Home'
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Successfully activated service 'com.canonical.Unity.Scope.Home'
+Activating service name='com.canonical.Unity.Scope.Applications'
+Activating service name='com.canonical.Unity.Scope.LocalFiles'
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Activating service name='org.gtk.vfs.AfcVolumeMonitor'
+Activated service 'org.gtk.vfs.AfcVolumeMonitor' failed: Failed to execute program org.gtk.vfs.AfcVolumeMonitor: Input/output error
+Activating service name='org.gtk.vfs.GoaVolumeMonitor'
+Activated service 'org.gtk.vfs.GoaVolumeMonitor' failed: Failed to execute program org.gtk.vfs.GoaVolumeMonitor: Input/output error
+Activating service name='org.gtk.vfs.GPhoto2VolumeMonitor'
+Activated service 'org.gtk.vfs.GPhoto2VolumeMonitor' failed: Failed to execute program org.gtk.vfs.GPhoto2VolumeMonitor: Input/output error
+Activating service name='org.gtk.vfs.MTPVolumeMonitor'
+Activated service 'org.gtk.vfs.MTPVolumeMonitor' failed: Failed to execute program org.gtk.vfs.MTPVolumeMonitor: Input/output error
+Successfully activated service 'com.canonical.Unity.Scope.LocalFiles'
+Successfully activated service 'com.canonical.Unity.Scope.Applications'
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Activating service name='org.gtk.vfs.AfcVolumeMonitor'
+Activated service 'org.gtk.vfs.AfcVolumeMonitor' failed: Failed to execute program org.gtk.vfs.AfcVolumeMonitor: Input/output error
+Activating service name='org.gtk.vfs.GoaVolumeMonitor'
+Activated service 'org.gtk.vfs.GoaVolumeMonitor' failed: Failed to execute program org.gtk.vfs.GoaVolumeMonitor: Input/output error
+Activating service name='org.gtk.vfs.GPhoto2VolumeMonitor'
+Activated service 'org.gtk.vfs.GPhoto2VolumeMonitor' failed: Failed to execute program org.gtk.vfs.GPhoto2VolumeMonitor: Input/output error
+Activating service name='org.gtk.vfs.MTPVolumeMonitor'
+Activated service 'org.gtk.vfs.MTPVolumeMonitor' failed: Failed to execute program org.gtk.vfs.MTPVolumeMonitor: Input/output error
+Activating service name='org.freedesktop.Notifications'
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Successfully activated service 'org.freedesktop.Notifications'
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Activating service name='org.gnome.GConf'
+Successfully activated service 'org.gnome.GConf'
+Activating service name='org.gnome.Nautilus'
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Activating service name='org.gtk.vfs.AfcVolumeMonitor'
+Activated service 'org.gtk.vfs.AfcVolumeMonitor' failed: Failed to execute program org.gtk.vfs.AfcVolumeMonitor: Input/output error
+Activating service name='org.gtk.vfs.GoaVolumeMonitor'
+Activated service 'org.gtk.vfs.GoaVolumeMonitor' failed: Failed to execute program org.gtk.vfs.GoaVolumeMonitor: Input/output error
+Activating service name='org.gtk.vfs.GPhoto2VolumeMonitor'
+Activated service 'org.gtk.vfs.GPhoto2VolumeMonitor' failed: Failed to execute program org.gtk.vfs.GPhoto2VolumeMonitor: Input/output error
+Activating service name='org.gtk.vfs.MTPVolumeMonitor'
+Activated service 'org.gtk.vfs.MTPVolumeMonitor' failed: Failed to execute program org.gtk.vfs.MTPVolumeMonitor: Input/output error
+Successfully activated service 'org.gnome.Nautilus'
+Activating service name='org.gnome.Terminal'
+Activating service name='org.gtk.vfs.Daemon'
+Activated service 'org.gtk.vfs.Daemon' failed: Failed to execute program org.gtk.vfs.Daemon: Input/output error
+Successfully activated service 'org.gnome.Terminal'

@@ -1,0 +1,12 @@
+Mon Oct 31 23:37:28 UTC 2016 crash report /var/crash/_usr_bin_nm-applet.999.crash detected
+/usr/share/apport/apport-gtk:16: PyGIWarning: Wnck was imported without specifying a version first. Use gi.require_version('Wnck', '3.0') before import to ensure that the right version gets loaded.
+  from gi.repository import GLib, Wnck, GdkX11, Gdk
+
+(apport-gtk:7288): GVFS-WARNING **: Error creating proxy: Error calling StartServiceByName for org.gtk.vfs.Daemon: GDBus.Error:org.freedesktop.DBus.Error.Spawn.ExecFailed: Failed to execute program org.gtk.vfs.Daemon: Input/output error (g-dbus-error-quark, 23)
+
+Mon Oct 31 23:54:11 UTC 2016 crash report /var/crash/_usr_bin_nm-applet.999.crash detected
+/usr/share/apport/apport-gtk:16: PyGIWarning: Wnck was imported without specifying a version first. Use gi.require_version('Wnck', '3.0') before import to ensure that the right version gets loaded.
+  from gi.repository import GLib, Wnck, GdkX11, Gdk
+
+(apport-gtk:5530): GVFS-WARNING **: Error creating proxy: Error calling StartServiceByName for org.gtk.vfs.Daemon: GDBus.Error:org.freedesktop.DBus.Error.Spawn.ExecFailed: Failed to execute program org.gtk.vfs.Daemon: Input/output error (g-dbus-error-quark, 23)
+
